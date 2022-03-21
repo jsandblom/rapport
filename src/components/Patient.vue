@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import PatientPlats from './PatientPlats.vue';
 import PatientId from './PatientId.vue';
+import PatientProblem from './PatientProblem.vue';
+import PatientAndning from './PatientAndning.vue';
+import PatientNutrition from './PatientNutrition.vue';
 </script>
 
 <template>
@@ -12,7 +15,7 @@ import PatientId from './PatientId.vue';
   <PatientProblem />
   <!-- andningsstörning, bili, kir, hjärt, annat, kryssrutor? -->
   <PatientAndning />
-  <!-- maskin, inställningar -->
+  <!-- maskin, inställningar, historia -->
   <PatientNutrition />
   <!-- sort, mängd, intervall, vätska, räknevätska -->
   <PatientLäkemedel />
