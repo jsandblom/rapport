@@ -1,14 +1,15 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import Patient from './components/Patient.vue'
+import Patient from './components/Patient.vue';
+
+const nyPatient = function () {};
 </script>
 
 <template>
-<Patient />
-
-<button @click="nyPatient"></button>
-
+  <Patient />
+  <hr />
+  <button @click="nyPatient">lägg till patient</button>
 </template>
 
 <style>

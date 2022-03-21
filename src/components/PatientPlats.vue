@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { ref, computed } from 'vue';
+
 const stad: 'Malmö' | 'Lund' = ref('Malmö');
 
 const MalmöPlatser = [
@@ -76,6 +78,20 @@ const LundPlatser = [
   '15:2',
   '15:3',
 ];
+
+const plats = computed(() =>
+  stad.value == 'Malmö' ? MalmöPlatser : LundPlatser
+);
 </script>
 
-<template></template>
+<template>
+  <label for="m"
+    >Malmö<input type="radio" v-model="stad" id="m" value="Malmö"
+  /></label>
+  <label for="l"
+    >Lund<input type="radio" v-model="stad" id="l" value="Lund"
+  /></label>
+  <select v-model="plats">
+    <option v-for="p in plats">{{ p }}</option>
+  </select>
+</template>
